@@ -5,10 +5,10 @@ import ColorForm from './components/ColorForm';
 
 function App() {
 
-  const [boxes, setState] = useState([]);
+  const [boxes, setBoxes] = useState([]);
   return (
     <div className="App">
-      <ColorForm inputs={boxes} setInputs={setState}/>
+      <ColorForm inputs={boxes} setInputs={setBoxes}/>
       <div>
       {boxes.map((box) =>
         <ColorDisplay inputs={box}/>
