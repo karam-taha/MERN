@@ -1,9 +1,20 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 
 const Todo = () => {
 const [newTodo, setNewTodo] = useState("");
 const [todos, setTodos] = useState([]);
+
+useEffect(() => {
+  const data = window.localStorage.getItem('AppKey');
+  if ( data !== null ) setTodos(JSON.parse(data));
+  console.log(data)
+}, []);
+
+useEffect(() => {
+  window.localStorage.setItem('AppKey', JSON.stringify(todos));
+  console.log(todos)
+}, [todos]);
 
 const handleNewTodoSubmit = (event) => {
   event.preventDefault();
@@ -63,6 +74,7 @@ const handleToggleComplete = (idx)=> {
           return (
             <div key={i} className='input'>
               <div>
+                
                 <span className={todoClasses.join(" ")}>{todo.text}</span>
                 <input onChange={(event)=>{
                   handleToggleComplete(i);
