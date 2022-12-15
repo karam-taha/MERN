@@ -33,7 +33,7 @@ const Display = (props) => {
         <p>Mass: {search.mass}</p>
         <p>Hair Color: {search.hair_color}</p>
         <p>Skin Color: {search.skin_color }</p>
-        <p>Homeworld: {search.homeworld}</p>
+        {/* <p>Homeworld: {search.homeworld}</p> */}
         {console.log(search.homeworld)}
       </div>
       }
