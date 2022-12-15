@@ -3,6 +3,7 @@ import axios from 'axios';
 
 const Display = (props) => {
 
+  //get the data and put it in object in the (.then) and after that do map to render
   const [search, setSearch] = useState('');
   const [responseError, setResponseError] = useState(false);
 
