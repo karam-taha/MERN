@@ -1,5 +1,43 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.form form p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(211, 211, 211);
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form form p input{
+  height: 30px;
+  font-size: 20px;
+}
+
+.form form .button{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.form form .button input{
+  padding: 5px;
+  width: 150px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(214, 214, 214);
+}
+
+.form form .button input:hover {
+  background-color: rgb(161, 161, 161);
 }
 
 .App-logo {
