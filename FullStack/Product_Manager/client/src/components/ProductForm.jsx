@@ -30,7 +30,8 @@ const Productform = (props) => {
                 <label>Description:</label><br/>
                 <input type="text" onChange={(e)=>setDescription(e.target.value)} value={description}/>
             </p>
-            <div className='button'><input type="submit" value="create" /></div>
+            <div className='create'>{(window.location.href.indexOf("edit")!= -1)?
+            <input type="submit" value='update' />:<input type="submit" value='create' />}</div>
         </form>
     </div>
   )

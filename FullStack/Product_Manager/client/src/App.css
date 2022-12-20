@@ -20,24 +20,50 @@
   font-size: 20px;
 }
 
-.form form .button{
+.form form .create{
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.form form .button input{
+.form form .create input{
   padding: 5px;
   width: 150px;
   font-size: 20px;
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: rgb(214, 214, 214);
+  background-color: blue;
+  box-shadow: 3px 3px 3px rgb(111, 111, 111);
+  color: white;
 }
 
-.form form .button input:hover {
-  background-color: rgb(161, 161, 161);
+.form form .create input:hover {
+  background-color: rgb(2, 2, 205);
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.delete button{
+  background-color: red;
+  box-shadow: 3px 3px 3px rgb(111, 111, 111);
+  color: white;
+  height: 30px;
+  width: 70px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete button:hover{
+  background-color: rgb(193, 0, 0);
 }
 
 .App-logo {

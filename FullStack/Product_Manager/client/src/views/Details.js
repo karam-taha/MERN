@@ -21,7 +21,7 @@ const Details = (props) => {
     }, [])
     return (
         <div>
-            <h2>{product.title}</h2>
+            <h1>{product.title}</h1>
             <div>
                 <p>Price: ${product.price}</p>
                 <p>Description: {product.description}</p>
