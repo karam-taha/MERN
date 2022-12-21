@@ -51,9 +51,20 @@
   font-size: 20px;
 }
 
+.details {
+  font-size: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+
 .delete button{
   background-color: red;
   box-shadow: 3px 3px 3px rgb(111, 111, 111);
+  font-size: 15px;
   color: white;
   height: 30px;
   width: 70px;

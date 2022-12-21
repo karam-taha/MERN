@@ -8,26 +8,22 @@ const Details = (props) => {
     const { id } = useParams();
     const navigate = useNavigate();
 
-    // const deleteProduct = (productId) => {
-    //     axios.delete('http://localhost:8000/api/products/' + productId)
-    //         .then(res => console.error(res))
-    //         .catch(err => console.error(err));
-    //     navigate("/products");
-    // }
     useEffect(() => {
         axios.get('http://localhost:8000/api/products/' + id)
             .then(res => setProduct(res.data.product))
             .catch(err => console.error(err));
     }, [])
     return (
-        <div>
+        <div className='details'>
             <h1>{product.title}</h1>
             <div>
                 <p>Price: ${product.price}</p>
                 <p>Description: {product.description}</p>
             </div>
-            <Link to={"/products/" + product._id + "/edit"}>Edit</Link>
-            <DeleteButton productId={ product._id } handelDelete ={ () => navigate("/products") }/>
+            <div className='buttons'>
+                <Link to={"/products/" + product._id + "/edit"}>Edit</Link>
+                <DeleteButton productId={ product._id } handelDelete ={ () => navigate("/products") }/>
+            </div>
         </div>
     )
 }
