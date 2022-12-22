@@ -15,7 +15,7 @@ function App() {
         <Route element={<Main/>} path="/"/>
         <Route element={<Submit/>} path="/new"/>
         <Route element={<Update/>} path="/edit/:id"/>
-        <Route element={<ErrorPath/>} path="/error"/>
+        <Route element={<ErrorPath/>} path="*"/>
       </Routes>
     </div>
   );
