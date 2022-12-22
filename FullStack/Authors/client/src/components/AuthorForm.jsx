@@ -12,7 +12,7 @@ const AuthorForm = (props) => {
 }
 
   return (
-    <div>
+    <div className='form'>
       <h1>Favorite authors</h1>
       <p><Link to={"/"}>Home</Link></p>
       <h3>Add a new author:</h3>
@@ -23,8 +23,8 @@ const AuthorForm = (props) => {
           {props.errors.map((err, index) => <p key={index} style={{color:"red"}}>{err}</p>)}
         </p>
         <div className='create'>{(window.location.href.indexOf("edit")!== -1)?
-          <div><button type="submit"><Link to={"/"}>Cancel</Link></button><input type="submit" value='update' /></div>
-          :<div><button type="submit"><Link to={"/"}>Cancel</Link></button><input type="submit" value='create' /></div>}
+          <div className='submit'><button type="submit"><Link className='cancel' to={"/"}>Cancel</Link></button><input type="submit" value='Update' /></div>
+          :<div className='submit'><button type="submit"><Link className='cancel' to={"/"}>Cancel</Link></button><input type="submit" value='Create' /></div>}
         </div>
       </form>
     </div>

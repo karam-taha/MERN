@@ -20,10 +20,12 @@ const AuthorList = (props) => {
           {props.authors.sort((a, b) => a.name.charAt(0).toUpperCase() + a.name.slice(1) > 
           b.name.charAt(0).toUpperCase() + b.name.slice(1) ? 1 : -1,).map((author, i) => {
           return <tr className='list' key={i}>
-            <td>{author.name}</td>
-            <td>
-              <Link to={"/edit/" + author._id}>edit</Link>
+            <td className='names'>{author.name}</td>
+            <td className='actions'>
+              <div>
+              <Link className='edit' to={"/edit/" + author._id}>Edit</Link>
               <DeleteButton authorId={ author._id } handelDelete ={ () => removeFromDom(author._id) }/>
+              </div>
             </td>
           </tr>
         })}
