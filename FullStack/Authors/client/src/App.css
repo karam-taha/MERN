@@ -31,6 +31,11 @@ table tr td{
   text-align: start;
 }
 
+.form form{
+  border: 2px solid black;
+  padding: 20px;
+}
+
 .form form p input{
   height: 30px;
   font-size: 20px;
