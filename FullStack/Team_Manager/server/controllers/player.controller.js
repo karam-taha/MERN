@@ -8,7 +8,7 @@ module.exports.findAllPlayers = (req, res) => {
 module.exports.findOnePlayer = (req, res) => {
     Player.findOne({_id: req.params.id})
     .then(onePlayer => res.json( onePlayer))
-    .catch(err => res.status(404).json(err));
+    .catch(err => res.status(400).json(err));
 }
 module.exports.createPlayer = (req, res) => {
     Player.create(req.body)
